@@ -1,0 +1,14 @@
+{
+  "design_task": true,
+  "reference_mcp": "screenrove",
+  "reference_urls": [
+    "https://example.org/reference"
+  ],
+  "color_task": false,
+  "color_mcp": null,
+  "implementation_task": true,
+  "implementation_tool": "playwright",
+  "rendered_review": "screenshots reviewed at mobile and desktop sizes",
+  "issues_reviewed": "typography and spacing corrected",
+  "blocked": false
+}
