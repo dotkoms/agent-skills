@@ -90,3 +90,7 @@ See [docs/agents.md](docs/agents.md) for the decision matrix and [references/orc
 Skills in this repo are markdown-first: each lives at `skills/<kebab-case-name>/SKILL.md` with YAML frontmatter (`name`, `description`) and follows the section anatomy (Overview, When to Use, Process, Common Rationalizations, Red Flags, Verification). Add a `scripts/` directory only when the skill ships runnable helpers; most skills are markdown only, and there are no per-skill zip packages.
 
 For the full format, naming conventions, frontmatter rules, supporting-file thresholds, and writing principles, see [docs/skill-anatomy.md](docs/skill-anatomy.md), the single source of truth for skill structure. Do not restate that guidance here, link to it.
+
+## Mandatory Design MCP Gate
+
+For any UI/UX design, redesign, palette, visual implementation or visual review, invoke `skills/design-mcp-orchestration/SKILL.md` **before** `frontend-ui-engineering`, `design-reference-research`, or `color-system-design`. Applicable connected MCPs must actually be called, and rendered UI must be visually inspected. Missing required tools mean BLOCKED, never DONE. See `docs/mandatory-design-mcps.md`. When using Claude Code, configure the Stop hook described there for machine-checked evidence; this file alone is instruction-level routing.
