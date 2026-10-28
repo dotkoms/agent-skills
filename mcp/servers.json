@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "core": [
+      "screenrove",
+      "onepagelove",
+      "playwright"
+    ],
+    "research": [
+      "screenrove",
+      "onepagelove"
+    ],
+    "testing": [
+      "playwright"
+    ],
+    "colors": [],
+    "all": [
+      "screenrove",
+      "onepagelove",
+      "playwright"
+    ]
+  },
+  "servers": {
+    "screenrove": {
+      "transport": "http",
+      "url": "https://screenrove.com/mcp",
+      "homepage": "https://screenrove.com/agents"
+    },
+    "onepagelove": {
+      "transport": "http",
+      "url": "https://api.onepagelove.com/mcp",
+      "homepage": "https://onepagelove.com/mcp"
+    },
+    "playwright": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "homepage": "https://github.com/microsoft/playwright-mcp"
+    }
+  },
+  "manual": [
+    {
+      "name": "Inspo MCP",
+      "url": "https://inspomcp.dev/",
+      "note": "Installer/packaging differs by client; review upstream before running."
+    },
+    {
+      "name": "VP0 MCP",
+      "url": "https://vp0.com/mcp"
+    },
+    {
+      "name": "A1 Gallery MCP",
+      "url": "https://www.a1.gallery/mcp"
+    },
+    {
+      "name": "Figma MCP",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/"
+    },
+    {
+      "name": "Dart/Flutter MCP",
+      "url": "https://docs.flutter.dev/ai/get-started"
+    },
+    {
+      "name": "shadcn/ui MCP",
+      "url": "https://ui.shadcn.com/docs/mcp"
+    },
+    {
+      "name": "Color Theory MCP",
+      "url": "https://github.com/JoshuaRamirez/color-theory-mcp"
+    },
+    {
+      "name": "Coolors MCP",
+      "url": "https://github.com/x51xxx/coolors-mcp"
+    },
+    {
+      "name": "Color Palette Extractor MCP",
+      "url": "https://github.com/aka-kika/color-palette-extractor-mcp"
+    },
+    {
+      "name": "Colors & Fonts MCP",
+      "url": "https://www.colorsandfonts.com/mcp/"
+    },
+    {
+      "name": "RNV Color MCP",
+      "url": "https://github.com/RNVizion/rnv-color-mcp"
+    }
+  ]
+}
