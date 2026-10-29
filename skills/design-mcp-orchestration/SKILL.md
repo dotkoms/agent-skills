@@ -16,6 +16,8 @@ A design is built as a team, not as one piece. Each component gets its own `comp
 ### 1. Lead: brief
 Inspect the product, platform, base component library and tokens (`package.json`, `components.json`, theme files). Confirm which MCPs are connected. Write a short brief: screen goal, audience, stack, tokens, motion budget, what must not change.
 
+Open the design gate in the target project root: create `.design-gate/active`, write a fresh `.design-gate/evidence.json` containing only `{"design_task": true}` (never reuse a previous task's evidence), and add `.design-gate/` to `.git/info/exclude` so it is never committed. While the marker exists, Claude Code's Stop hook refuses to finish until the evidence is complete.
+
 ### 2. Wave A — direction (parallel)
 - **`design-researcher`** — runs `design-reference-research` through reference MCPs; returns references, design contract and the **component list**.
 - **`color-designer`** — runs `color-system-design` through a colour MCP; returns token table, measured contrast and restyle notes. Spawn it on every design task; when colour isn't changing it audits the existing tokens for this screen.
@@ -30,7 +32,7 @@ Resolve conflicts across picks: one base system, the page's motion budget, consi
 Spawn **`design-reviewer`** with the run/open instructions, contract, component list and token table. It renders the UI (Playwright MCP, Flutter MCP/Widgetbook), inspects real viewport sizes and states, and attributes each defect to a component. Fix Critical and Important defects; if a component is wrong rather than mis-styled, re-spawn its `component-scout` with the defect. Re-review. Stop after the review passes or after three rounds, and report what remains.
 
 ### 6. Report
-Personas spawned, MCPs each one actually used or found unavailable, references, components installed per library, token changes, screenshots inspected, defects fixed and remaining limitations. If `.design-gate/active` exists, fill `.design-gate/evidence.json`.
+Personas spawned, MCPs each one actually used or found unavailable, references, components installed per library, token changes, screenshots inspected, defects fixed and remaining limitations. Then close the gate: fill `.design-gate/evidence.json` with what actually happened — `reference_mcp`, `reference_urls`, `color_task`/`color_mcp`, `implementation_task`/`implementation_tool`, `agents_spawned` (persona names, one entry per scout), `component_mcps` (libraries the scouts queried), `rendered_review`, `issues_reviewed`, and `blocked: true` with the reason if any wave was blocked. Run `python3 <agent-skills>/scripts/design-gate.py .design-gate/evidence.json`; when it prints PASS, delete `.design-gate/active`. Never write evidence for steps that did not run.
 
 **Harness without subagents:** run each persona's instructions yourself in the same order, one component at a time, and say that the fan-out ran sequentially.
 

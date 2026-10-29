@@ -8,6 +8,8 @@
   "color_mcp": null,
   "implementation_task": true,
   "implementation_tool": "playwright",
+  "agents_spawned": ["design-researcher", "color-designer", "component-scout", "component-scout", "design-reviewer"],
+  "component_mcps": ["shadcn", "magicui", "eased"],
   "rendered_review": "screenshots reviewed at mobile and desktop sizes",
   "issues_reviewed": "typography and spacing corrected",
   "blocked": false

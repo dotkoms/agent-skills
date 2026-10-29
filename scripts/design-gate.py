@@ -3,10 +3,11 @@
 import json,sys
 from pathlib import Path
 def validate(d):
-    required=["design_task","reference_mcp","reference_urls","rendered_review","issues_reviewed"]
+    required=["design_task","reference_mcp","reference_urls","agents_spawned","rendered_review","issues_reviewed"]
     missing=[k for k in required if not d.get(k)]
     if d.get("color_task") and not d.get("color_mcp"): missing.append("color_mcp")
     if d.get("implementation_task") and not d.get("implementation_tool"): missing.append("implementation_tool")
+    if d.get("implementation_task") and not d.get("component_mcps"): missing.append("component_mcps")
     if d.get("blocked"): missing.append("blocked")
     return missing
 def main():
