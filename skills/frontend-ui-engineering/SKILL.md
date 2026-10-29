@@ -126,6 +126,10 @@ When the product needs a distinct visual direction, collect evidence before choo
 
 Use references as evidence, not as templates. If references are unavailable, document the assumptions and verify the result against the product's existing design system.
 
+### Build from component libraries
+
+For React/web UI, search a connected component-library MCP before hand-writing a component, then restyle what you install to the product's tokens. Which library fits which job, and how to connect them, is in [component library MCPs](../design-mcp-orchestration/references/component-libraries.md).
+
 ### Avoid the AI Aesthetic
 
 AI-generated UI has recognizable patterns. Avoid all of them:

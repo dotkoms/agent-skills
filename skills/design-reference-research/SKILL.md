@@ -1,6 +1,6 @@
 ---
 name: design-reference-research
-description: Research real mobile and web UI references through free inspiration databases and available MCPs, extract reusable patterns, and prepare a design contract before implementing screens. Use for redesigns, screen inspiration, navigation, dashboards, onboarding, fintech, Flutter, SaaS, or landing pages.
+description: Research real mobile and web UI references through free inspiration databases and available MCPs, extract reusable patterns, and prepare a design contract before implementing screens. Use when doing redesigns, screen inspiration, navigation, dashboards, onboarding, fintech, Flutter, SaaS, or landing pages.
 ---
 
 # Design Reference Research

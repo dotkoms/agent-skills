@@ -63,7 +63,7 @@ def main():
     if args.apply and not shutil.which(client):
         parser.error(f"{client} not found on PATH")
     if args.apply and any(catalog["servers"][name]["transport"] == "stdio" for name in names) and not shutil.which("npx"):
-        parser.error("npx not found (required for Playwright MCP)")
+        parser.error("npx not found (required for stdio MCPs in this profile)")
     existing = get_existing(client, args.apply)
     failures = 0
     for name in names:

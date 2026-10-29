@@ -1,0 +1,45 @@
+{
+  "skill_name": "design-mcp-orchestration",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Design a new landing page hero with animated background for our product",
+        "top_k": 3
+      },
+      {
+        "prompt": "Redesign the dashboard UI using shadcn and some Magic UI or Aceternity animations",
+        "top_k": 3
+      },
+      {
+        "prompt": "Make a frontend design for the pricing page with animated components",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Optimize the slow database indexes",
+        "owner": "performance-optimization"
+      },
+      {
+        "prompt": "Tag and publish the release",
+        "owner": "git-workflow-and-versioning"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build an animated pricing section for our Next.js + shadcn marketing site.",
+      "expected_output": "A pricing section built from a component-library MCP, restyled to project tokens and visually checked",
+      "files": [
+        "design-mcp-orchestration"
+      ],
+      "expectations": [
+        "Searches a connected component-library MCP (shadcn, Magic UI, Aceternity, Animate UI, Eased or Wensity) before hand-writing components",
+        "Does not add a second base component system alongside shadcn",
+        "Restyles installed components to the project's tokens and checks reduced-motion",
+        "Reports BLOCKED with the setup command if no component MCP is connected"
+      ]
+    }
+  ]
+}

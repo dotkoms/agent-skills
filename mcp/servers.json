@@ -14,10 +14,24 @@
       "playwright"
     ],
     "colors": [],
+    "components": [
+      "shadcn",
+      "magicui",
+      "eased",
+      "wensity",
+      "heroui",
+      "mantine"
+    ],
     "all": [
       "screenrove",
       "onepagelove",
-      "playwright"
+      "playwright",
+      "shadcn",
+      "magicui",
+      "eased",
+      "wensity",
+      "heroui",
+      "mantine"
     ]
   },
   "servers": {
@@ -39,6 +53,57 @@
         "@playwright/mcp@latest"
       ],
       "homepage": "https://github.com/microsoft/playwright-mcp"
+    },
+    "shadcn": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "shadcn@latest",
+        "mcp"
+      ],
+      "homepage": "https://ui.shadcn.com/docs/mcp"
+    },
+    "magicui": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@magicuidesign/mcp@latest"
+      ],
+      "homepage": "https://github.com/magicuidesign/mcp"
+    },
+    "eased": {
+      "transport": "http",
+      "url": "https://eased.dev/api/mcp",
+      "homepage": "https://github.com/easedui/ui"
+    },
+    "wensity": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@wensity/mcp@latest"
+      ],
+      "homepage": "https://ui.wensity.com/docs/mcp"
+    },
+    "heroui": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@heroui/react-mcp@latest"
+      ],
+      "homepage": "https://heroui.com/en/docs/react/getting-started/mcp-server"
+    },
+    "mantine": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mantine/mcp-server"
+      ],
+      "homepage": "https://mantine.dev/guides/llms/"
     }
   },
   "manual": [
@@ -64,8 +129,14 @@
       "url": "https://docs.flutter.dev/ai/get-started"
     },
     {
-      "name": "shadcn/ui MCP",
-      "url": "https://ui.shadcn.com/docs/mcp"
+      "name": "21st.dev MCP",
+      "url": "https://21st.dev/mcp",
+      "note": "Needs an API key (x-api-key header on https://21st.dev/api/mcp); official installer: npx @21st-dev/cli@latest init --client claude. AI generation tools need paid AI access."
+    },
+    {
+      "name": "Aceternity UI / Animate UI registries",
+      "url": "https://ui.shadcn.com/docs/registry/namespace",
+      "note": "No MCP of their own; reached through the shadcn MCP once @aceternity / @animate-ui registries are in the project's components.json. See skills/design-mcp-orchestration/references/component-libraries.md."
     },
     {
       "name": "Color Theory MCP",

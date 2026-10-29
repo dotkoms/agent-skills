@@ -8,6 +8,7 @@ This module adds free-first UI/UX research to the existing software engineering 
 - [Skill: research workflow](../skills/design-reference-research/SKILL.md)
 - [Catalog: MCPs, libraries, galleries and free-tier caveats](../skills/design-reference-research/references/resources.md)
 - [MCP setup and security](../skills/design-reference-research/references/mcp-setup.md)
+- [Component library MCPs](../skills/design-mcp-orchestration/references/component-libraries.md)
 - [Existing frontend implementation skill](../skills/frontend-ui-engineering/SKILL.md)
 
 ## How to invoke
@@ -26,8 +27,9 @@ For best results include: platform, current repo/component paths, target screen,
 | Goal | Research | Implementation / verification |
 |---|---|---|
 | Flutter app | VP0, Banani, Kombai | Dart/Flutter MCP, Widgetbook |
-| React dashboard | Screenrove, Inspo, Figma Community | frontend-ui-engineering, shadcn/ui, Playwright |
-| Landing page | One Page Love, A1, Lapa Ninja | frontend-ui-engineering, Playwright |
+| React dashboard | Screenrove, Inspo, Figma Community | frontend-ui-engineering, shadcn/ui or Mantine or HeroUI MCP, Playwright |
+| Landing page | One Page Love, A1, Lapa Ninja | frontend-ui-engineering, Wensity / Magic UI / Aceternity blocks, Playwright |
+| Motion & micro-interactions | Screenrove, Inspo | Animate UI, Eased, Magic UI via MCP; check reduced-motion |
 
 ## Quality bar
 Document source URLs; extract patterns rather than copy; keep existing design tokens; check mobile responsiveness/accessibility and non-happy-path states; mark unavailable tools and uninspected sources explicitly.

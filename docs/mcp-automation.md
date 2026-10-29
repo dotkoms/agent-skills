@@ -27,6 +27,7 @@ Or on macOS/Linux: `bash scripts/setup-mcps.sh --client claude --profile core --
 - `research`: Screenrove + One Page Love.
 - `testing`: Playwright only.
 - `colors`: currently manual only; vetted server launchers are not confirmed.
+- `components`: keyless component-library MCPs — shadcn/ui, Magic UI, Eased, Wensity, HeroUI, Mantine. Aceternity and Animate UI are reached through the shadcn MCP via `components.json` registries; 21st.dev needs an API key and stays manual. See [component library MCPs](../skills/design-mcp-orchestration/references/component-libraries.md).
 - `all`: all **verified launcher entries**, not every cataloged candidate.
 
 ## Scopes, repeatability and safety
@@ -40,7 +41,7 @@ Or on macOS/Linux: `bash scripts/setup-mcps.sh --client claude --profile core --
 - CLI list success proves **registration**, not that an MCP responds correctly. Test a real search/interaction after setup. CLI behavior may change with versions.
 
 ## Manual candidates
-See `mcp/servers.json` for Inspo, VP0, A1 Gallery, Figma, Flutter, shadcn/ui and color-related MCP links. These are deliberately not bulk-installed without verifying each transport, package, authentication requirement and free usage terms. Copy a provider's official setup instructions into your client and add a smoke test before moving it into an automatic profile.
+See `mcp/servers.json` for Inspo, VP0, A1 Gallery, Figma, Flutter, 21st.dev and color-related MCP links. These are deliberately not bulk-installed without verifying each transport, package, authentication requirement and free usage terms. Copy a provider's official setup instructions into your client and add a smoke test before moving it into an automatic profile.
 
 ## Adding a new reviewed server
 1. Audit publisher, package/source, transport, URL, cost and auth requirements.

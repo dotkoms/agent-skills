@@ -15,6 +15,10 @@ npx -y inspo-mcp install
 # Review Playwright MCP upstream README for current npm package / configuration:
 # https://github.com/microsoft/playwright-mcp
 
+# React component-library MCPs (all keyless): shadcn, Magic UI, Eased, Wensity, HeroUI, Mantine
+# python3 scripts/setup-mcps.py --client claude --profile components --apply
+# Details, registries and 21st.dev (keyed): skills/design-mcp-orchestration/references/component-libraries.md
+
 # Check Figma and Flutter's official configuration instructions:
 # https://developers.figma.com/docs/figma-mcp-server/
 # https://docs.flutter.dev/ai/get-started
