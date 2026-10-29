@@ -1,0 +1,19 @@
+description = "Design or redesign UI as a multi-agent build — research, colour, one component scout per component via component-library MCPs, then rendered review"
+
+prompt = """
+Invoke the design-mcp-orchestration skill and run its multi-agent workflow on the request that follows.
+
+/design is a two-wave fan-out orchestrator. The main session is the lead. The CLI exposes each custom subagent in `agents/` as a tool with the same name, so `component-scout.md` becomes a `component-scout` tool. Issue every call in a wave in a single assistant turn so they run in parallel.
+
+1. Write the brief (stack, tokens, connected MCPs, motion budget).
+2. Wave A — call `design-researcher` and `color-designer` together.
+3. Wave B — call one `component-scout` per item in the researcher's component list, all together. Scouts recommend; they do not install.
+4. Integrate: install picks in one sequential pass, compose with frontend-ui-engineering, restyle to tokens.
+5. Wave C — call `design-reviewer` on the rendered UI; fix, re-scout if a component is wrong, re-review (max three rounds).
+6. Report what each agent used, what came from which library, and what remains.
+
+Subagents cannot call other subagents, so the lead does every call. If subagents are unavailable in the current The CLI version, run each persona's instructions sequentially in the same order and say so.
+
+If no component-library MCP is connected, stop at Wave B and give the setup command:
+python3 scripts/setup-mcps.py --client claude --profile components --apply
+"""

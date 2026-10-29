@@ -12,6 +12,8 @@ This module adds free-first UI/UX research to the existing software engineering 
 - [Existing frontend implementation skill](../skills/frontend-ui-engineering/SKILL.md)
 
 ## How to invoke
+Any UI/frontend design request triggers `design-mcp-orchestration`, which runs the build as a team: `design-researcher` + `color-designer` in parallel, then one `component-scout` per component (each searching every connected component-library MCP), then the lead integrates and `design-reviewer` checks the rendered result. `/design <request>` starts the same workflow explicitly.
+
 In Claude Code, Codex or another skills-aware agent, ask:
 
 > Use the design-reference-research skill to research 3–6 real references for [screen], compare options against this repo's design system, write a design contract, implement with frontend-ui-engineering, and verify the resulting UI in a browser or Flutter preview.

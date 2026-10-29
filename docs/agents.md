@@ -8,6 +8,10 @@ Specialist personas that play a single role with a single perspective. Each pers
 | [security-auditor](../agents/security-auditor.md) | Security Engineer | Vulnerability detection, OWASP-style audit |
 | [test-engineer](../agents/test-engineer.md) | QA Engineer | Test strategy, coverage analysis, Prove-It pattern |
 | [web-performance-auditor](../agents/web-performance-auditor.md) | Web Performance Engineer | Core Web Vitals audit, loading/rendering/network analysis |
+| [design-researcher](../agents/design-researcher.md) | Design Researcher | Reference research, design contract, component list (`/design` Wave A) |
+| [color-designer](../agents/color-designer.md) | Colour Specialist | Semantic tokens and measured contrast (`/design` Wave A) |
+| [component-scout](../agents/component-scout.md) | Component Specialist | One component, compared across component-library MCPs (`/design` Wave B) |
+| [design-reviewer](../agents/design-reviewer.md) | Visual QA | Rendered review attributed per component (`/design` Wave C) |
 
 ## How personas relate to skills and commands
 
